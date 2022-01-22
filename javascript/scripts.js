@@ -28,10 +28,10 @@ const showOnHomePage = (eachRecipe) => {
     eachRecipeDiv.classList.add("each-recipe");
     eachRecipeDiv.setAttribute("tabindex", "0");
     eachRecipeDiv.insertAdjacentHTML("afterbegin", `
-    <h1 class="rp-title">${recipe.title}</h1>
+    <a class="read-more" href="#"><h1 class="rp-title">${recipe.title}</h1>
     <img src=${recipe.images.medium} alt="${recipe.title}">
     <p>${recipe.description}</p>
-    <a class="read-more" href="#">Let's Cook...</a>`);
+    <a class="read-more" href="#">Let's Cook...</a></a>`);
 
     allRecipeDiv.append(eachRecipeDiv);
   });

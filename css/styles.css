@@ -42,17 +42,14 @@ p {
   font-size:2rem;
 }
 
-a {
+a h1, a p ,a {
   text-decoration: none;
+  text-align: center;
   color:#9A9483;
 }
 
-a:visited {
-  color:#000;
-}
-
-a:hover {
-  color:#f96b00;
+a h1:visited a p:visited a a:visited {
+  color:#9A9483;
 }
 
 .all-recipes {
