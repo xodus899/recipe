@@ -30,7 +30,9 @@ p {
 .logo img {
   height:auto;
   width:50px;
+  cursor: pointer;
 }
+
 
 .rp-title {
   font-size:1.5rem;
