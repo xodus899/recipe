@@ -104,6 +104,16 @@ window.addEventListener("keydown", (event) => {
   }
 });
 
+const scrollTop = () => {
+  document.querySelector(".logo img").addEventListener("click", () => {
+    window.scrollTo({
+      top:0,
+      behavior:'smooth'
+    })
+  });
+};
+
 getAllRecipe();
+scrollTop();
 
 modalDiv.addEventListener("click", closeModal);
