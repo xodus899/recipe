@@ -5,8 +5,8 @@
       "title": "Queso Brat Scramble",
       "description": "A delicious breakfast, fit for a crowd.",
       "images": {
-        "full": "/images/queso-brat-scramble.jpg",
-        "medium": "/images/queso-brat-scramble-m.jpg"
+        "full": "images/queso-brat-scramble.jpg",
+        "medium": "images/queso-brat-scramble-m.jpg"
       },
       "servings": 5,
       "prepTime": 10,
@@ -153,8 +153,8 @@
       "title": "Italian Meatballs",
       "description": "Quick, easy and authentic.",
       "images": {
-        "full": "/images/italian-meatballs.jpg",
-        "medium": "/images/italian-meatballs-m.jpg"
+        "full": "images/italian-meatballs.jpg",
+        "medium": "images/italian-meatballs-m.jpg"
       },
       "servings": 6,
       "prepTime": 25,
@@ -231,8 +231,8 @@
       "title": "Kielbasa Skillet",
       "description": "A polish delicacy.",
       "images": {
-        "full": "/images/kielbasa-skillet.jpg",
-        "medium": "/images/kielbasa-skillet-m.jpg"
+        "full": "images/kielbasa-skillet.jpg",
+        "medium": "images/kielbasa-skillet-m.jpg"
       },
       "servings": 8,
       "prepTime": 20,
@@ -319,8 +319,8 @@
       "title": "Brussel Chips",
       "description": "Tasty, crispy, spicy and healthy!",
       "images": {
-        "full": "/images/brussel-chips.jpg",
-        "medium": "/images/brussel-chips-m.jpg"
+        "full": "images/brussel-chips.jpg",
+        "medium": "images/brussel-chips-m.jpg"
       },
       "servings": 4,
       "prepTime": 15,
@@ -391,8 +391,8 @@
       "title": "Pancake Mountain",
       "description": "A giant stack of pancakes to share or to horde.",
       "images": {
-        "full": "/images/pancake-mountain.jpg",
-        "medium": "/images/pancake-mountain-m.jpg"
+        "full": "images/pancake-mountain.jpg",
+        "medium": "images/pancake-mountain-m.jpg"
       },
       "servings": 8,
       "prepTime": 15,
