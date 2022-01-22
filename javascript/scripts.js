@@ -26,6 +26,7 @@ const showOnHomePage = (eachRecipe) => {
   eachRecipe.forEach((recipe) => {
     const eachRecipeDiv = document.createElement("div");
     eachRecipeDiv.classList.add("each-recipe");
+    eachRecipeDiv.setAttribute("tabindex", "0");
     eachRecipeDiv.insertAdjacentHTML("afterbegin", `
     <h1 class="rp-title">${recipe.title}</h1>
     <img src=${recipe.images.medium} alt="${recipe.title}">
@@ -117,3 +118,5 @@ getAllRecipe();
 scrollTop();
 
 modalDiv.addEventListener("click", closeModal);
+
+
