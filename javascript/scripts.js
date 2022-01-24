@@ -37,38 +37,40 @@ const showOnHomePage = (eachRecipe) => {
   });
 };
 
-const showFullRecipe = (specials) => {
+const clickedToSeeRecipe = (recipe,specialId) => {
   const modalInnerDiv = document.querySelector(".modal-inner");
+  const letsCook = document.querySelectorAll("a.read-more");
+  letsCook.forEach((recipeButton) => {
+    recipeButton.addEventListener("click", (event) => {
+      event.preventDefault();
+      if (event.currentTarget.closest("div").querySelector(".rp-title").outerText === recipe.title) {
+        modalInnerDiv.innerHTML = `<h2 class="inner-modal-title">${recipe.title}</h2> <span class="close"> X </span>
+              <img src=${recipe.images.full} alt="${recipe.title}">
+              <p class="inner-description">${recipe.description}</p>
+              <p>Prep Time: ${recipe.prepTime}</p>
+              <p>Cook Time: ${recipe.cookTime}</p>
+              <p>Servings: ${recipe.servings}</p>
+              <ul>${recipe.ingredients.map((eachIngredient) => {return (`<li>${!eachIngredient.amount? "":eachIngredient.amount} ${eachIngredient.measurement} ${eachIngredient.name}</li>`)}).join(" ") }</ul>
+              <hr>
+              <ol>${recipe.directions.map((eachDirection) => {return ( `<li>${eachDirection.instructions}</li>`)}).join("") }</ol>
+              <div class="coupon">
+                <p>Special ${specialId.type} Deal: ${specialId.title}</p>
+                <p>${specialId.text}</p>
+              </div>
+              `;
+        modalDiv.classList.add("open");
+        document.body.classList.add("fixed");
+      }
+    });
+  });
+}
 
+const showFullRecipe = (specials) => {
   specials.forEach((specialId) => {
     allRecipes.forEach((recipe) => {
       recipe.ingredients.forEach((ingredient) => {
         if (specialId.ingredientId === ingredient.uuid) {
-
-          const letsCook = document.querySelectorAll("a.read-more");
-          letsCook.forEach((recipeButton) => {
-            recipeButton.addEventListener("click", (event) => {
-              event.preventDefault();
-              if (event.currentTarget.closest("div").querySelector(".rp-title").outerText === recipe.title) {
-                modalInnerDiv.innerHTML = `<h2 class="inner-modal-title">${recipe.title}</h2> <span class="close"> X </span>
-                      <img src=${recipe.images.full} alt="${recipe.title}">
-                      <p class="inner-description">${recipe.description}</p>
-                      <p>Prep Time: ${recipe.prepTime}</p>
-                      <p>Cook Time: ${recipe.cookTime}</p>
-                      <p>Servings: ${recipe.servings}</p>
-                      <ul>${recipe.ingredients.map((eachIngredient) => {return (`<li>${!eachIngredient.amount? "":eachIngredient.amount} ${eachIngredient.measurement} ${eachIngredient.name}</li>`)}).join(" ") }</ul>
-                      <hr>
-                      <ol>${recipe.directions.map((eachDirection) => {return ( `<li>${eachDirection.instructions}</li>`)}).join("") }</ol>
-                      <div class="coupon">
-                        <p>Special ${specialId.type} Deal: ${specialId.title}</p>
-                        <p>${specialId.text}</p>
-                      </div>
-                      `;
-                modalDiv.classList.add("open");
-                document.body.classList.add("fixed");
-              }
-            });
-          });
+          clickedToSeeRecipe(recipe,specialId);
         }
       });
     });
