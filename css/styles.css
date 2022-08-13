@@ -127,7 +127,7 @@ a h1:visited a p:visited a a:visited {
 .modal-inner {
   display: flex;
   flex-direction:column;
-  max-width: 70vw;
+  max-width: 45vw;
   background: #fff;
   border-radius: 15px;
   padding: 2rem;
