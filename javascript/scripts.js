@@ -45,7 +45,7 @@ const clickedToSeeRecipe = (recipe,specialId) => {
       event.preventDefault();
       if (event.currentTarget.closest("div").querySelector(".rp-title").outerText === recipe.title) {
         modalInnerDiv.innerHTML = `<h2 class="inner-modal-title">${recipe.title}</h2> <span class="close"> X </span>
-              <img src=${recipe.images.full} alt="${recipe.title}">
+              <img src=${recipe.images.medium} alt="${recipe.title}">
               <p class="inner-description">${recipe.description}</p>
               <p>Prep Time: ${recipe.prepTime}</p>
               <p>Cook Time: ${recipe.cookTime}</p>
