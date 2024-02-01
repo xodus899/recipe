@@ -160,12 +160,21 @@ span.close {
   .rp-title {
     font-size:1.1rem;
   }
+
+  .modal-inner {
+    max-width: 50vw;
+  }
 }
 
 @media (max-width:600px) {
   body {
     overscroll-behavior:inherit;
   }
+
+  .modal-inner {
+    max-width: 70vw;
+  }
+  
   .each-recipe {
     padding:10%;
     min-width:200px;
